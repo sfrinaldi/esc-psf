@@ -1,5 +1,5 @@
 from .math_module import xp, xcipy, ensure_np_array
-from scoob_llowfsc import utils
+from scoob_llowfsc import utils # SFR- is this correct?
 
 import numpy as np
 import scipy

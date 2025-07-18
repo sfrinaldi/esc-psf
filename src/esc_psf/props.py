@@ -1,5 +1,5 @@
 from .math_module import xp, xcipy, ensure_np_array
-from esc_llowfsc import utils
+from esc_psf import utils # SFR- Changed from esc_llowfsc (think this was an error?)
 
 import numpy as np
 import astropy.units as u

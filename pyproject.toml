@@ -1,0 +1,63 @@
+# This part shouldn't change
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta" 
+
+[project]
+name = "esc_psf"
+description = "Simulator for ESC Images"
+readme = "README.md"
+license = { text = "GNU GENERAL PUBLIC LICENSE - Version 3" }
+authors = [
+    { name = "Kian Milani", email = "kianmilani@arizona.edu" },
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+]
+requires-python = ">=3.8"
+dependencies = [
+    #"stp-psf @ git+https://github.com/uasal/stp-psf.git@u/kian1377/develop",
+    "scoob-llowfsc @ git+https://github.com/kian1377/scoob-llowfsc.git",
+    "astropy",
+    "matplotlib",
+    "scipy",
+    "numpy",
+    "astropy",
+    "poppy",
+    "ray",
+]
+dynamic = ["version"]
+
+# On a mac, install optional dependencies with `pip install '.[dev]'` (include the single quotes)
+[project.optional-dependencies]
+dev = ["jupyter"]
+
+[project.urls]
+Homepage = "https://github.com/kian1377/esc-psf/README.md" 
+Repository = "https://github.com/kian1377/esc-psf" 
+
+[tool.setuptools]
+packages = ["esc_psf"] 
+package-dir = { "" = "src" }
+include-package-data = true
+
+# Generated the _version.py automatically from GitHub tags
+[tool.setuptools_scm]
+write_to = "src/esc_psf/_version.py"
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+
+#[tool.pytest.ini_options]
+#testpaths = [
+#	"tests",
+#]
+
+[tool.coverage.run]
+omit=["src/esc_psf/_version.py"] 
+
+# Include notebooks for install
+[tool.setuptools.package-data]
+"esc_psf" = ["notebooks/**/*"] 

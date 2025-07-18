@@ -20,7 +20,7 @@ classifiers = [
 requires-python = ">=3.8"
 dependencies = [
     #"stp-psf @ git+https://github.com/uasal/stp-psf.git@u/kian1377/develop",
-    "scoob_llowfsc @ git+https://github.com/kian1377/scoob-llowfsc.git",
+    "scoob_llowfsc @ git+ssh://git@github.com:uasal/scoob-llowfsc.git",
     "astropy",
     "matplotlib",
     "scipy",

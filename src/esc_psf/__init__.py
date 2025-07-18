@@ -8,6 +8,6 @@ from .utils import *
 __version__ = importlib.metadata.version(__package__ or "esc_psf")
 __all__ = [ "__version__"]
 
-# path = Path(os.path.dirname(__file__))
+path = Path(os.path.dirname(__file__))
 
 

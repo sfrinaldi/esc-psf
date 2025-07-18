@@ -20,7 +20,7 @@ classifiers = [
 requires-python = ">=3.8"
 dependencies = [
     #"stp-psf @ git+https://github.com/uasal/stp-psf.git@u/kian1377/develop",
-    "scoob_llowfsc @ git+ssh://git@github.com:uasal/scoob-llowfsc.git",
+    #"scoob_llowfsc @ git+ssh://git@github.com:uasal/scoob-llowfsc.git", # This is a dependency but temporally putting in under optional for now / private repo
     "astropy",
     "matplotlib",
     "scipy",
@@ -35,7 +35,7 @@ dynamic = ["version"]
 
 # On a mac, install optional dependencies with `pip install '.[dev]'` (include the single quotes)
 [project.optional-dependencies]
-dev = ["jupyter"]
+dev = ["jupyter","scoob_llowfsc @ git+ssh://git@github.com:uasal/scoob-llowfsc.git"]
 
 [project.urls]
 Homepage = "https://github.com/kian1377/esc-psf/README.md" 
